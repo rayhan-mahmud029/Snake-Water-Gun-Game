@@ -1,6 +1,10 @@
 import random
 
 
+print("Actully in this game you choose a weapen and a virtual player also choose a weapen.\n //**Rules: \n  1. You will get 10 chance. After that all points will be count.\n  2. If boths(virtual and you) have same weapen, the result will be draw.\n")
+print('{0:*^100}'.format("THIS GAME IS PROGRAMMED BY RAYHAN MAHMUD"))
+print("\n \n ####Type '0000' for exit####")
+
 user_point = 0
 pc_point = 0
 l = 1
@@ -15,6 +19,10 @@ while True:
   if l == 11:
     print('{0:*^100}'.format("GAME OVER"))
     break
+
+  elif user_input == '0000':
+    break
+  
   elif user_input == choosing:
     print("Result: draw!")
     print('{0: >100}'.format(f"Virtual user point = {pc_point}"))
@@ -100,6 +108,8 @@ print(f"*/Your Total Point = {user_point}")
 print(f"*/Virtual Players Total Point = {pc_point}")
 if user_point > pc_point:
   print('{0:*>30}'.format("Congratulations You Won!"))
+if user_point == pc_point:
+  print('{0:*>30}'.format("Mach Draw!"))
 else:
   print('{0:*>30}'.format("ShiTT man, You Lose!"))
 
